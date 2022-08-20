@@ -1,21 +1,21 @@
 let carObject = {
     vehicle : "Car",
     imageUrl : "https://images.wallpaperscraft.com/image/single/land_rover_range_rover_sport_white_jeep_95237_1280x720.jpg",
-    farePerKilo : 20,
+    farePerKilo : 35,
     capacity : 4,
     description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro doloribus temporib mollitia expedita aspernatur ab eaque sunt sed quaerat veritatis?"
 }
 let bikeObject = {
     vehicle : "Bike",
     imageUrl : "https://images.wallpaperscraft.com/image/single/kawasaki-ninja_motorcycle_sports_74170_1280x720.jpg",
-    farePerKilo : 10,
+    farePerKilo : 15,
     capacity : 2,
     description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro doloribus temporib mollitia expedita aspernatur ab eaque sunt sed quaerat veritatis?"
 }
 let busObject = {
     vehicle : "Bus",
     imageUrl : "https://coolwallpapers.me/th700/5749757-bus-wallpapers.jpg",
-    farePerKilo : 60,
+    farePerKilo : 70,
     capacity : 50,
     description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro doloribus temporib mollitia expedita aspernatur ab eaque sunt sed quaerat veritatis?"
 }
@@ -161,7 +161,7 @@ function getDiscount(){
         const randomNumber = Math.floor((Math.random() * 15) + 5);
         const discountAmount =  (costElementValue * randomNumber) / 100;
         const discountPrice = costElementValue - discountAmount;
-        totalCostField.innerText = discountPrice;
+        totalCostField.innerText = discountPrice.toFixed(2);
         
         discountParsentage.innerText = randomNumber + "%";
 
